@@ -6,7 +6,7 @@ export default ({ req }) => {
 
     return axios.create({
       //baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
-      baseURL: 'client-ticket.pages.dev',
+      baseURL: 'www.ticket-app-sz.website',
       headers: req.headers
     });
   } else {
