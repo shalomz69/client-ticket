@@ -1,16 +1,18 @@
 import axios from 'axios';
 import { useState } from 'react';
 
+
 export default ({ url, method, body, onSuccess }) => {
   const [errors, setErrors] = useState(null);
 
   const doRequest = async (props = {}) => {
     try {
       setErrors(null);
-      const response = await axios[method](url, { ...body, ...props });
-
+      const baseUrl = 'http://www.ticket-app-sz.website'
+      const response = await axios[method](baseUrl + url, { ...body, ...props });
+      
       if (onSuccess) {
-        console.log(response);
+        //console.log(response);
         onSuccess(response.data);
       }
 
