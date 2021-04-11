@@ -8,7 +8,7 @@ export default ({ url, method, body, onSuccess }) => {
   const doRequest = async (props = {}) => {
     try {
       setErrors(null);
-      const baseUrl = 'http://www.ticket-app-sz.website'
+      const baseUrl = 'https://www.ticket-app-sz.website'
       const response = await axios[method](baseUrl + url, { ...body, ...props });
       
       if (onSuccess) {
