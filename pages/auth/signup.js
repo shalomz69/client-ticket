@@ -13,9 +13,6 @@ export default () => {
       password
     },
     onSuccess: () =>{
-
-      
-
      Router.push('/')}
   });
 

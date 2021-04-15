@@ -9,7 +9,7 @@ export default ({ url, method, body, onSuccess }) => {
     try {
       setErrors(null);
       const baseUrl = 'https://www.ticket-app-sz.website'
-      const response = await axios[method](baseUrl + url, { ...body, ...props });
+      const response = await axios[method](baseUrl + url, { withCredentials:true, ...body, ...props });
       
       if (onSuccess) {
         //console.log(response);
