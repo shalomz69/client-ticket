@@ -17,6 +17,7 @@ export default ({ req }) => {
     // We must be on the browser
     return axios.create({
       baseURL: 'https://www.ticket-app-sz.website',
+      headers: req.headers
     });
   }
 
